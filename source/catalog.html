@@ -7,11 +7,11 @@
   <body>
     <header class="main-header">
       <a class="main-header__logo" href="index.html">
-        <img class="main-header__logo-image" src="" width="" height="" alt="Интернет-магазин товаров ручной работы для дома 'Мишка'">
+        <img class="main-header__logo-image" src="#" width="123" height="123" alt="Интернет-магазин товаров ручной работы для дома 'Мишка'">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <ul class="main-nav__site-list">
+        <ul class="main-nav__list site-list">
           <li class="site-list__item">
             <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
@@ -27,87 +27,89 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <section>
-        <h1>Каталог товаров</h1>
-        <ul>
-          <li>
-            <a href="">
-              <img src="" width="" height="" alt="">
-              <h3>Зайчик-попрыгайчик</h3>
-              <p>Рост 30 см, вес 200 г</p>
-              <p>
-                <span class="price">1 200 руб.</span>
-                <span class="visually-hidden icon-cart">Заказать</span>
-              </p>
+    <main class="page-main">
+      <section class="products-catalog">
+        <h1 class="products-catalog__title site-title">Каталог товаров</h1>
+        <ul class="products-catalog__list">
+          <li class="products-catalog__item">
+            <a href="products-catalog__product-wrap-link">
+              <img class="products-catalog__image"  src="#" width="123" height="123" alt="Зайчик-попрыгайчик">
+              <h3 class="products-catalog__title">Зайчик-попрыгайчик</h3>
             </a>
+              <p class="products-catalog__description">Рост 30 см, вес 200 г</p>
+              <p class="products-catalog__price-block">
+                <span class="price-block__price">1 200 руб.</span>
+                <a class="visually-hidden price-block__icon-cart" href="#">Заказать</a>
+              </p>
           </li>
-          <li>
-            <a href="">
-              <img src="" width="" height="" alt="">
-              <h3>Корзинка для белья</h3>
-              <p>Диаметр 15 см, высота 10 см</p>
-              <p>
-                <span class="price">690 руб.</span>
-                <span class="visually-hidden icon-cart">Заказать</span>
-              </p>
+          <li class="products-catalog__item">
+            <a href="products-catalog__product-wrap-link">
+              <img class="products-catalog__image"  src="#" width="123" height="123" alt="Корзинка для белья">
+              <h3 class="products-catalog__title">Корзинка для белья</h3>
             </a>
+              <p class="products-catalog__description">Диаметр 15 см, высота 10 см</p>
+              <p class="products-catalog__price-block">
+                <span class="price-block__price">690 руб.</span>
+                <a class="visually-hidden price-block__icon-cart" href="#">Заказать</a>
+              </p>
           </li>
-          <li>
-            <a href="">
-              <img src="" width="" height="" alt="">
-              <h3>Большая корзинка для игрушек</h3>
-              <p>Диаметр 30 см, высота 30 см</p>
-              <p>
-                <span class="price">1 500 руб.</span>
-                <span class="visually-hidden icon-cart">Заказать</span>
-              </p>
+          <li class="products-catalog__item">
+            <a href="products-catalog__product-wrap-link">
+              <img class="products-catalog__image"  src="#" width="123" height="123" alt="Зайчик-попрыгайчик">
+              <h3 class="products-catalog__title">Большая корзинка для игрушек</h3>
             </a>
+              <p class="products-catalog__description">Диаметр 30 см, высота 30 см</p>
+              <p class="products-catalog__price-block">
+                <span class="price-block__price">1 500 руб.</span>
+                <a class="visually-hidden price-block__icon-cart" href="#">Заказать</a>
+              </p>
           </li>
         </ul>
       </section>
-      <article>
-        <h2>Процесс производства</h2>
+      <article class="manufacturing-process">
+        <h2 class="manufacturing-process__title">Процесс производства</h2>
         <!-- блок видеоплеера -->
-        <p>
+        <p class="manufacturing-process__video-description">
           По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
         </p>
-        Сделать заказ
+        <a class="manufacturing-process__order-link site-link" href="">Сделать заказ</a>
       </article>
     </main>
     <footer class="page-footer">
-      <ul class="social-list">
+      <ul class="page-footer__social-list social-list">
         <li class="social-item">
-          <a class="social-item__social-link instagram-link" href="#">
+          <a class="social-item__social-link social-link--instagram-link" href="#">
             <span class="visually-hidden">Инстаграм</span>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-item__social-link facebook-link" href="#">
+          <a class="social-item__social-link social-link--facebook-link" href="#">
             <span class="visually-hidden">Фейсбук</span>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-item__social-link twitter-link" href="#">
+          <a class="social-item__social-link social-link--twitter-link" href="#">
             <span class="visually-hidden">Твиттер</span>
           </a>
         </li>
       </ul>
-      <a class="" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">
         Разработано
       </a>
     </footer>
-    <section>
-      <h2 class="modal__title">Добавить в корзину</h2>
-      <form class="" action="https://echo.htmlacademy.ru" method="post">
-        <legend>Выберите размер:</legend>
-        <input class="visually-hidden" type="radio" name="size-s" id="size-s" checked>
-        <input class="visually-hidden" type="radio" name="size-m" id="size-m">
-        <input class="visually-hidden" type="radio" name="size-l" id="size-l">
-        <label for="size-s">s</label>
-        <label for="size-m">m</label>
-        <label for="size-l">l</label>
-        <input class="modal__button" type="submit" value="Добавить">
+    <section class="modal-order">
+      <h2 class="modal-order__title">Добавить в корзину</h2>
+      <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="order-form__group">
+          <legend class="order-form__title">Выберите размер:</legend>
+          <input class="order-form__input visually-hidden" type="radio" name="size-s" id="size-s" checked>
+          <input class="order-form__input visually-hidden" type="radio" name="size-m" id="size-m">
+          <input class="order-form__input visually-hidden" type="radio" name="size-l" id="size-l">
+          <label class="order-form__checkbox-indicator" for="size-s">s</label>
+          <label class="order-form__checkbox-indicator" for="size-m">m</label>
+          <label class="order-form__checkbox-indicator" for="size-l">l</label>
+        </fieldset>
+        <input class="order-form__submit-button" type="submit" value="Добавить">
       </form>
     </section>
   </body>

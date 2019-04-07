@@ -7,13 +7,14 @@
   <body>
     <header class="main-header">
       <a class="main-header__logo">
-        <img class="main-header__logo-image" src="" width="" height="" alt="Интернет-магазин товаров ручной работы для дома 'Мишка'">
+        <img class="main-header__logo-image" src="#" width="123" height="123" alt="Интернет-магазин товаров ручной работы для дома 'Мишка'">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <ul class="main-nav__site-list">
+        <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>   <!--  Сомнения у меня здесь по поводу класса для ссылки.
+            Она ведь является элементом лишки. но как лучше назвать класс мне в голову не пришло  -->
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="custom-made-order.html">Вязание на заказ</a>
@@ -28,112 +29,132 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1>Милые штуки ручной работы для дома</h1>
+      <h1 class="site-title">Милые штуки ручной работы для дома</h1>
       <ul class="catalog-list">
         <li class="catalog-item">
-          <a class="catalog-item__link interior-goods-link" href="#">Предметы интерьера</a>
+          <a class="catalog-item__link catalog-item__link--interior-goods" href="#">Предметы интерьера</a>
         </li>
         <li class="catalog-item">
-          <a class="catalog-item__link toys-link" href="#">Детские игрушки</a>
+          <a class="catalog-item__link catalog-item__link--toys" href="#">Детские игрушки</a>
         </li>
       </ul>
       <article class="popular-products">
-        <section class="product top-of-the-week">
-          <h2 class="product__title">Вязаные корзинки</h2>
-          <p class="product__description-">
-            Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
-          </p>
-          <table class="product__specifications">
-            <tr>
-              <td class="">Цвет:</td>
-              <td class="">«Тиффани»/серый</td>
-            </tr>
-            <tr>
-              <td class="">Диаметр:</td>
-              <td class="">25 см</td>
-            </tr>
-            <tr>
-              <td class="">Высота:</td>
-              <td class="">15 см</td>
-            </tr>
-          </table>
-          <img class="product__image"  src="" width="" height="" alt="Вязаные корзинки">
-          <span class="product__price">Цена: 990 руб.</span>
-          <button class="product__order-button" type="button">Заказать</button>
-        </section>
+        <ul class="popular-products-list">  <!-- Сделал списком, так как товаров недели может быть несколько -->
+          <li class="popular-products-item top-of-the-week">  <!-- Думаю пометку "товар недели" добавлять через псевдоэлемент по наличию класса  "top-of-the-week" . Или лучше просто в разметку внести? -->
+            <h2 class="product__title">Вязаные корзинки</h2>
+            <p class="product__description-">
+              Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
+            </p>
+            <table class="product__specifications-table specifications-table">
+              <tr>
+                <td class="specifications-table__name-cell">Цвет:</td>
+                <td class="specifications-table__value-cell">«Тиффани»/серый</td>
+              </tr>
+              <tr>
+                <td class="specifications-table__name-cell">Диаметр:</td>
+                <td class="specifications-table__value-cell">25 см</td>
+              </tr>
+              <tr>
+                <td class="specifications-table__name-cell">Высота:</td>
+                <td class="specifications-table__value-cell">15 см</td>
+              </tr>
+            </table>
+            <img class="product__image"  src="#" width="123" height="123" alt="Вязаные корзинки">
+            <span class="product__price">Цена: 990 руб.</span>
+            <a class="product__order-link site-link" href="#">Заказать</a> <!-- В критерии написано, что при клики на эту кнопку будет всплывать модальное окно. Я сделал ссылкой, чтобы при отключенном js можно было бы все равно заказать товар пройдя по ссылке. Правильно ли это? -->
+          </li>
+        </ul>
       </article>
       <section class="about-us">
         <h2 class="about-us__title">Коротко о нас:</h2>
-        <ul class="about-us__list">
-          <li class="">Экологически чистые материалы</li>
-          <li class="">Скандинавский стиль по российской цене</li>
-          <li class="">Увеличивает лайки на фотографиях</li>
-          <li class="">Связано вручную с любовью и умилением</li>
-          <li class="">Поддержка отечественного производителя</li>
-          <li class="">Поставляется в подарочной упаковке</li>
+        <ul class="about-us__list advantages__list">
+          <li class="advantages__item advantages__item--eco">Экологически чистые материалы</li>
+          <li class="advantages__item advantages__item--scandinavian">Скандинавский стиль по российской цене</li>
+          <li class="advantages__item advantages__item--like">Увеличивает лайки на фотографиях</li>
+          <li class="advantages__item advantages__item--kniting">Связано вручную с любовью и умилением</li>
+          <li class="advantages__item advantages__item--domestic">Поддержка отечественного производителя</li>
+          <li class="advantages__item advantages__item--gift-wrap">Поставляется в подарочной упаковке</li>
         </ul>
       </section>
       <section class="reviews">
         <h2 class="reviews__title">Отзывы</h2>
-        <p class="reviews__text">
-          Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-        </p>
-        <span class="rewiews__author">Анастасия Красильникова</span>
-        <span class="rewiews__author-email">@misssssiskras</span>
-        <button class="reviews__button-arrow reviews__button-arrow--previous" type="button">
+        <ul class="reviews__list">
+          <li class="reviews__item">
+            <p class="reviews__text">
+              Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+            </p>
+            <span class="rewiews__author">Анастасия Красильникова</span>
+            <span class="rewiews__author-email">@misssssiskras</span>   <!-- В стайл гайде не указано должно ли имя автора и его email быть ссылкой -->
+           </li>
+        </ul>
+        <button class="reviews__button reviews__button--previous" type="button">
           <span class="visually-hidden">Предыдущий отзыв</span>
         </button>
-        <button class="reviews__button-arrow reviews__button-arrow--next" type="button">
+        <button class="reviews__button reviews__button--next" type="button">
           <span class="visually-hidden">Следующий отзыв</span>
         </button>
-        <a class="" href="write-review.html">Написать</a>
+        <a class="reviews__link site-link" href="write-review.html">Написать</a>
       </section>
-      <section class="contacts">
+      <section class="contacts">  <!-- Нормальна ли такая разметка этого блока с адресом?  -->
         <h2 class="contacts__title">Контакты</h2>
-        <address>
-          e-mail:     info@mimimishkashop.ru
-
-                      г. Санкт-Петербург,
-                      ул. Большая Конюшенная,
-          адрес:      д. 19/8, офис 101
+        <address class="contacts__address">
+          <table class="address__table">
+            <tr>
+              <td class="description-cell">e-mail:</td>
+              <td class="value-cell">
+                <a class="e-mail-link" href="#">info@mimimishkashop.ru</a>
+              </td>
+            </tr>
+            <tr>
+              <td class="description-cell">адрес:</td>
+              <td class="value-cell">
+                г. Санкт-Петербург, <br>
+                ул. Большая Конюшенная, <br>
+                д. 19/8, офис 101
+              </td>
+            </tr>
+          </table>
         </address>
-        <img class="map" src="" width="" height="" alt="">
-        <a class="" href="">Напишите нам</a>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d594.1892861618236!2d30.322664504626882!3d59.9386704280382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1554620423510!5m2!1sru!2sru" width="400" height="300" allowfullscreen></iframe>
+        <img class="map" src="#" width="123" height="123" alt="Мы находимся по адресу ул. Большая Конюшенная, д. 19/8, офис 101">
+        <a class="contacts__link site-link" href="write-us.html">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
-      <ul class="social-list">
+      <ul class="page-footer__social-list social-list">
         <li class="social-item">
-          <a class="social-item__social-link instagram-link" href="#">
+          <a class="social-item__social-link social-link--instagram-link" href="#">
             <span class="visually-hidden">Инстаграм</span>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-item__social-link facebook-link" href="#">
+          <a class="social-item__social-link social-link--facebook-link" href="#">
             <span class="visually-hidden">Фейсбук</span>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-item__social-link twitter-link" href="#">
+          <a class="social-item__social-link social-link--twitter-link" href="#">
             <span class="visually-hidden">Твиттер</span>
           </a>
         </li>
       </ul>
-      <a class="" href="https://htmlacademy.ru/intensive/adaptive">
+      <a class="page-footer__academy-link" href="https://htmlacademy.ru/intensive/adaptive">
         Разработано
       </a>
     </footer>
-    <section>
-      <h2 class="modal__title">Добавить в корзину</h2>
-      <form class="" action="https://echo.htmlacademy.ru" method="post">
-        <legend>Выберите размер:</legend>
-        <input class="visually-hidden" type="radio" name="size-s" id="size-s" checked>
-        <input class="visually-hidden" type="radio" name="size-m" id="size-m">
-        <input class="visually-hidden" type="radio" name="size-l" id="size-l">
-        <label for="size-s">s</label>
-        <label for="size-m">m</label>
-        <label for="size-l">l</label>
-        <input class="modal__button" type="submit" value="Добавить">
+    <section class="modal-order">
+      <h2 class="modal-order__title">Добавить в корзину</h2>
+      <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="order-form__group">
+          <legend class="order-form__title">Выберите размер:</legend>
+          <input class="order-form__input visually-hidden" type="radio" name="size-s" id="size-s" checked>
+          <input class="order-form__input visually-hidden" type="radio" name="size-m" id="size-m">
+          <input class="order-form__input visually-hidden" type="radio" name="size-l" id="size-l">
+          <label class="order-form__checkbox-indicator" for="size-s">s</label>
+          <label class="order-form__checkbox-indicator" for="size-m">m</label>
+          <label class="order-form__checkbox-indicator" for="size-l">l</label>
+        </fieldset>
+        <input class="order-form__submit-button" type="submit" value="Добавить">
       </form>
     </section>
   </body>
