@@ -13,8 +13,7 @@
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Каталог товаров</a>   <!--  Сомнения у меня здесь по поводу класса для ссылки.
-            Она ведь является элементом лишки. но как лучше назвать класс мне в голову не пришло  -->
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="custom-made-order.html">Вязание на заказ</a>
@@ -39,9 +38,10 @@
         </li>
       </ul>
       <article class="popular-products">
-        <ul class="popular-products-list">  <!-- Сделал списком, так как товаров недели может быть несколько -->
-          <li class="popular-products-item top-of-the-week">  <!-- Думаю пометку "товар недели" добавлять через псевдоэлемент по наличию класса  "top-of-the-week" . Или лучше просто в разметку внести? -->
+        <ul class="popular-products-list">
+          <li class="product">
             <h2 class="product__title">Вязаные корзинки</h2>
+            <span class="product__mark">Товар недели</span>
             <p class="product__description-">
               Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
             </p>
@@ -61,13 +61,13 @@
             </table>
             <img class="product__image"  src="#" width="123" height="123" alt="Вязаные корзинки">
             <span class="product__price">Цена: 990 руб.</span>
-            <a class="product__order-link site-link" href="#">Заказать</a> <!-- В критерии написано, что при клики на эту кнопку будет всплывать модальное окно. Я сделал ссылкой, чтобы при отключенном js можно было бы все равно заказать товар пройдя по ссылке. Правильно ли это? -->
+            <a class="product__order-link site-link" href="#">Заказать</a>
           </li>
         </ul>
       </article>
-      <section class="about-us">
-        <h2 class="about-us__title">Коротко о нас:</h2>
-        <ul class="about-us__list advantages__list">
+      <section class="advantages">
+        <h2 class="advantages__title">Коротко о нас:</h2>
+        <ul class="advantages__list">
           <li class="advantages__item advantages__item--eco">Экологически чистые материалы</li>
           <li class="advantages__item advantages__item--scandinavian">Скандинавский стиль по российской цене</li>
           <li class="advantages__item advantages__item--like">Увеличивает лайки на фотографиях</li>
@@ -123,17 +123,17 @@
     <footer class="page-footer">
       <ul class="page-footer__social-list social-list">
         <li class="social-item">
-          <a class="social-item__social-link social-link--instagram-link" href="#">
+          <a class="social-item__social-link social-item__social-link--instagram" href="#">
             <span class="visually-hidden">Инстаграм</span>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-item__social-link social-link--facebook-link" href="#">
+          <a class="social-item__social-link social-item__social-link--facebook" href="#">
             <span class="visually-hidden">Фейсбук</span>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-item__social-link social-link--twitter-link" href="#">
+          <a class="social-item__social-link social-item__social-link--twitter" href="#">
             <span class="visually-hidden">Твиттер</span>
           </a>
         </li>
